@@ -12,7 +12,7 @@
   <meta name="author" content="GermanGenie" />
   <link rel="canonical" href="https://germangenie.app/" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://germangenie.app/" />
   <meta property="og:title" content="GermanGenie – Build Real German Sentences One Puzzle at a Time" />
@@ -58,41 +58,12 @@
   }
   </script>
 
-<link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-  
-  <link rel="preload" href="https://cdn.fontshare.com/v2/asset/ST3WKSSDM6IN5WOLRCCHCHYV2OTXOYXG/6IN5WOLRC....woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://cdn.fontshare.com/v2/asset/WYO2P7DQV6XPIMU23OYXG6XPIMU23O....woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Fonts: single render-blocking link, no JS tricks needed for a landing page -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,700,800&display=swap" rel="stylesheet" />
 
-  <style>
-    :root {
-      --bg-deep: #080f1a; --bg-mid: #0d1827; --bg-card: #112035;
-      --accent: #4fc3f7; --text-main: #e8f4fd; --text-muted: #a3c7e6;
-      --border: rgba(79,195,247,0.15);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      background: var(--bg-deep); color: var(--text-main); 
-      font-family: 'Switzer', sans-serif; line-height: 1.6; overflow-x: hidden; 
-    }
-    nav { 
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 18px 48px; background: rgba(8,15,26,0.85); backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border); height: 80px;
-    }
-    #hero { text-align: center; padding: 100px 24px; min-height: 600px; }
-    #pain { background: var(--bg-mid); padding: 80px 24px; min-height: 500px; } 
-    
-    #hero h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; opacity: 1 !important; transform: none !important; }
-  </style>
-
-  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,700,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  
-  <noscript>
-    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,700,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </noscript>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -119,12 +90,12 @@
   <!-- PAIN POINTS -->
   <section id="pain" aria-labelledby="pain-heading">
     <h2 id="pain-heading" class="reveal">Why Learning German Feels so Frustrating</h2>
-    <div class="pain-grid" role="list">
-      <div class="pain-card reveal" role="listitem">You know vocabulary but can't build German sentences</div>
-      <div class="pain-card reveal" role="listitem">German word order feels confusing</div>
-      <div class="pain-card reveal" role="listitem">Grammar exercises are boring</div>
-      <div class="pain-card reveal" role="listitem">Apps don't adapt to your German level</div>
-    </div>
+    <ul class="pain-grid">
+      <li class="pain-card reveal">You know vocabulary but can't build German sentences</li>
+      <li class="pain-card reveal">German word order feels confusing</li>
+      <li class="pain-card reveal">Grammar exercises are boring</li>
+      <li class="pain-card reveal">Apps don't adapt to your German level</li>
+    </ul>
   </section>
 
   <!-- HOW IT WORKS -->
@@ -132,26 +103,26 @@
     <h2 id="how-heading" class="reveal">Learn by Building – Not Memorizing</h2>
     <div class="how-inner reveal">
       <div class="puzzle-img">
-        <img src="image 44.webp">
+        <img src="image 44.webp" alt="Puzzle pieces representing the GermanGenie sentence-building method" width="400" height="300" loading="lazy" />
       </div>
-      <div class="steps-grid" role="list" aria-label="How GermanGenie works">
-        <article class="step-card" role="listitem">
+      <ol class="steps-grid" aria-label="How GermanGenie works">
+        <li class="step-card">
           <div class="step-num" aria-hidden="true">1</div>
           <div class="step-label">Read a real-life German question</div>
-        </article>
-        <article class="step-card" role="listitem">
+        </li>
+        <li class="step-card">
           <div class="step-num" aria-hidden="true">2</div>
           <div class="step-label">Choose the correct German word pieces</div>
-        </article>
-        <article class="step-card" role="listitem">
+        </li>
+        <li class="step-card">
           <div class="step-num" aria-hidden="true">3</div>
           <div class="step-label">Build your German sentence</div>
-        </article>
-        <article class="step-card" role="listitem">
+        </li>
+        <li class="step-card">
           <div class="step-num" aria-hidden="true">4</div>
           <div class="step-label">Get instant grammar feedback</div>
-        </article>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -180,13 +151,11 @@
   <footer>
     <span>© <span id="year"></span> GermanGenie. All rights reserved.</span>
     <nav aria-label="Footer navigation">
-      <a href="/privacy" style="margin-right:16px">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Service</a>
     </nav>
   </footer>
 
-  <!-- Scripts -->
   <script src="main.js" defer></script>
-
 </body>
 </html>
