@@ -60,24 +60,30 @@
 
 <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-
+  
   <link rel="preload" href="https://cdn.fontshare.com/v2/asset/ST3WKSSDM6IN5WOLRCCHCHYV2OTXOYXG/6IN5WOLRC....woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="https://cdn.fontshare.com/v2/asset/WYO2P7DQV6XPIMU23OYXG6XPIMU23O....woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://cdn.fontshare.com/v2/asset/YDPDINVT6Y7SCNZJOTYXG/Y7SCNZJOT....woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://cdn.fontshare.com/v2/asset/YETVURK7HSMQAIKPHVYXG/SMQAIKPHV....woff2" as="font" type="font/woff2" crossorigin>
 
   <style>
     :root {
       --bg-deep: #080f1a; --bg-mid: #0d1827; --bg-card: #112035;
-      --accent: #4fc3f7; --text-main: #e8f4fd; --border: rgba(79,195,247,0.15);
+      --accent: #4fc3f7; --text-main: #e8f4fd; --text-muted: #a3c7e6;
+      --border: rgba(79,195,247,0.15);
     }
-    body { background: var(--bg-deep); color: var(--text-main); font-family: 'Switzer', sans-serif; margin: 0; }
-    nav { display: flex; justify-content: space-between; padding: 18px 48px; background: rgba(8,15,26,0.85); backdrop-filter: blur(16px); }
-    #hero { text-align: center; padding: 100px 24px; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(79,195,247,0.12) 0%, transparent 70%); }
-    #hero h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; }
-    .btn-primary { background: #b2ebf2; color: #080f1a; padding: 10px 26px; border-radius: 50px; text-decoration: none; font-weight: 700; }
-    #pain { min-height: 450px; } 
-    .pain-card { min-height: 300px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background: var(--bg-deep); color: var(--text-main); 
+      font-family: 'Switzer', sans-serif; line-height: 1.6; overflow-x: hidden; 
+    }
+    nav { 
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 48px; background: rgba(8,15,26,0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border); height: 80px;
+    }
+    #hero { text-align: center; padding: 100px 24px; min-height: 600px; }
+    #pain { background: var(--bg-mid); padding: 80px 24px; min-height: 500px; } 
+    
+    #hero h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; opacity: 1 !important; transform: none !important; }
   </style>
 
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,700,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
