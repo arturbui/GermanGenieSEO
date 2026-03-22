@@ -70,13 +70,6 @@ nav {
   color: var(--text-main);
   text-decoration: none;
 }
-a.logo:link,
-a.logo:visited,
-a.logo:hover,
-a.logo:active {
-  color: var(--text-main);
-  text-decoration: none;
-}
 
 .nav-right {
   display: flex;
