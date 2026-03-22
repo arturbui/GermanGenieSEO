@@ -1,7 +1,5 @@
-// ── Copyright year ──
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ── Scroll reveal ──
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -17,7 +15,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ── Level bar animation ──
 const levelBar = document.getElementById('levelBar');
 const barObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

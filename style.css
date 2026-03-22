@@ -11,7 +11,6 @@
   --border:     rgba(79, 195, 247, 0.15);
 }
 
-/* ── RESET ── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ── BASE ── */
 body {
   background: var(--bg-deep);
   color: var(--text-main);
@@ -32,7 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle noise texture */
 body::before {
   content: '';
   position: fixed;
@@ -48,7 +45,6 @@ section {
   z-index: 1;
 }
 
-/* ── NAV ── */
 nav {
   position: sticky;
   top: 0;
@@ -86,7 +82,6 @@ nav {
 }
 .nav-link:hover { color: var(--accent); }
 
-/* ── BUTTONS ── */
 .btn-primary {
   display: inline-block;
   background: var(--btn-bg);
@@ -118,7 +113,6 @@ nav {
   50%       { box-shadow: 0 0 32px 8px rgba(79, 195, 247, 0.25); }
 }
 
-/* ── HERO ── */
 #hero {
   text-align: center;
   padding: 100px 24px 80px;
@@ -145,7 +139,6 @@ nav {
   margin: 0 auto 40px;
 }
 
-/* ── PAIN POINTS ── */
 #pain {
   background: var(--bg-mid);
   padding: 80px 24px;
@@ -186,7 +179,6 @@ nav {
   transform: translateY(-3px);
 }
 
-/* ── HOW IT WORKS ── */
 #how {
   padding: 80px 24px;
   text-align: center;
@@ -257,7 +249,6 @@ nav {
   font-weight: 500;
 }
 
-/* ── LEVEL ── */
 #level {
   background: var(--bg-mid);
   padding: 80px 24px;
@@ -316,7 +307,6 @@ nav {
   color: var(--text-muted);
 }
 
-/* ── CTA ── */
 #cta {
   padding: 100px 24px;
   text-align: center;
@@ -330,7 +320,6 @@ nav {
   max-width: 600px;
 }
 
-/* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--border);
   padding: 28px 48px;
@@ -360,7 +349,6 @@ footer a {
 }
 footer a:hover { color: var(--accent); }
 
-/* ── SCROLL REVEAL ── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -371,7 +359,6 @@ footer a:hover { color: var(--accent); }
   transform: translateY(0);
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   nav {
     padding: 14px 20px;
