@@ -58,20 +58,31 @@
   }
   </script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://api.fontshare.com">
-<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 
-<link rel="preload" 
-      href="https://cdn.fontshare.com/path-to-your-actual-font.woff2" 
-      as="font" 
-      type="font/woff2" 
-      crossorigin>
+  <link rel="preload" href="https://cdn.fontshare.com/path-to-your-actual-font.woff2" as="font" type="font/woff2" crossorigin>
 
-<link href="https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <style>
+    /* Essential styles to show the Hero instantly */
+    :root {
+      --bg-deep: #080f1a; --bg-mid: #0d1827; --bg-card: #112035;
+      --accent: #4fc3f7; --text-main: #e8f4fd; --border: rgba(79,195,247,0.15);
+    }
+    body { background: var(--bg-deep); color: var(--text-main); font-family: sans-serif; margin: 0; }
+    nav { display: flex; justify-content: space-between; padding: 18px 48px; background: rgba(8,15,26,0.85); backdrop-filter: blur(16px); }
+    #hero { text-align: center; padding: 100px 24px; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(79,195,247,0.12) 0%, transparent 70%); }
+    #hero h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); font-weight: 800; }
+    .btn-primary { background: #b2ebf2; color: #080f1a; padding: 10px 26px; border-radius: 50px; text-decoration: none; font-weight: 700; }
+  </style>
 
-  <!-- Stylesheet -->
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,700,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  
+  <noscript>
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </noscript>
 </head>
 
 <body>
