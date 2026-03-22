@@ -58,34 +58,12 @@
   }
   </script>
 
-  <!-- Critical inline CSS: renders the above-the-fold content instantly -->
-  <style>
-    :root { --bg-deep:#080f1a; --bg-mid:#0d1827; --accent:#4fc3f7; --btn-bg:#b2ebf2; --btn-text:#080f1a; --text-main:#e8f4fd; --text-muted:#a3c7e6; --border:rgba(79,195,247,0.15); }
-    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body { background:var(--bg-deep); color:var(--text-main); font-family:sans-serif; line-height:1.6; overflow-x:hidden; }
-    nav { position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:18px 48px; background:rgba(8,15,26,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
-    .logo { font-weight:800; font-size:1.25rem; letter-spacing:-0.02em; color:var(--text-main); text-decoration:none; }
-    a.logo:visited { color:var(--text-main); text-decoration:none; }
-    .nav-right { display:flex; align-items:center; gap:24px; }
-    .nav-link { color:var(--text-main); text-decoration:none; font-weight:500; font-size:0.95rem; }
-    .btn-primary { display:inline-block; background:var(--btn-bg); color:var(--btn-text); font-weight:700; font-size:0.95rem; padding:10px 26px; border-radius:50px; border:none; cursor:pointer; text-decoration:none; }
-    .hero-btn { font-size:1.15rem; padding:16px 48px; border-radius:14px; }
-    #hero { text-align:center; padding:100px 24px 80px; background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(79,195,247,0.12) 0%, transparent 70%); }
-    #hero h1 { font-size:clamp(2.4rem,6vw,3.8rem); font-weight:800; line-height:1.15; letter-spacing:-0.03em; max-width:680px; margin:0 auto 24px; }
-    #hero h1 span { color:var(--accent); }
-    #hero p { color:var(--text-muted); font-size:1.05rem; max-width:480px; margin:0 auto 40px; }
-    section { position:relative; z-index:1; }
-  </style>
-
-  <!-- Fonts: non-blocking -->
+  <!-- Fonts: single render-blocking link, no JS tricks needed for a landing page -->
   <link rel="preconnect" href="https://api.fontshare.com" />
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,700,800&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,700,800&display=swap" /></noscript>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,700,800&display=swap" rel="stylesheet" />
 
-  <!-- Full stylesheet: non-blocking -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
